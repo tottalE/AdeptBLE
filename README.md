@@ -138,6 +138,8 @@ The battery only connects to the XIAO when PSW1 is on, so the switch must also b
 3. Check that the cut slide switch pins don't reach past the bottom of the housing.
 4. Fit the top housing and test again.
 
+**Note:** On my build with the mod top housing, even a slight misalignment of the top housing stops the buttons from clicking reliably. Line up the top housing carefully, so that each button sits over its switch, and test every button before you fully tighten the housing.
+
 
 ## License
 
