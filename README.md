@@ -9,7 +9,7 @@ To learn how to pair the trackball and what each button does, see [USAGE.md](./U
 
 My build uses `housing/AdeptBLE_bottom.3mf` for the bottom housing and a top housing from [Adept Anyball](https://github.com/adept-anyball/mod), the [50-55mm ball](https://github.com/adept-anyball/mod/tree/master/50-55mm%20ball) variant. This variant is designed for a 50–55 mm ball and BTUs. Its files aren't included in this repository, so download them from the link. 
 
-<!-- Add build photos here, for example: ![Back of the assembled board](./image/build-back.jpg) -->
+<img src="./image/build.jpg" alt="The assembled AdeptBLE trackball with yellow buttons and a black 8-ball" width="400">
 
 
 ## 1. Repository contents
