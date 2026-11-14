@@ -87,6 +87,19 @@ Hold SW2 and press:
 - **Scroll lock:** While holding SW4 or SW6, press SW3 or SW5 to keep scrolling after you release. Press SW4 or SW6 to return to normal.
 - **Precision:** Tap SW6 to slow the pointer to one fifth of its speed. Tap SW6 again to return to normal.
 
+## Change the buttons
+
+You can remap the buttons without rebuilding the firmware, using [ZMK Studio](https://zmk.studio/). The firmware source has ZMK Studio enabled. The prebuilt `.uf2` in this repository may not.
+
+1. Connect the trackball to your computer over USB. ZMK Studio doesn't work over Bluetooth.
+2. Open [zmk.studio](https://zmk.studio/) in Chrome or Edge, and select **AdeptBLE**.
+3. Select a button, then choose its behavior and key.
+4. Click **Save**. Unsaved changes are lost when the trackball restarts.
+
+To add a shortcut, such as copy, use **Key Press** with the key and its modifier, for example `C` with **L GUI** for Cmd + C on macOS. The `Copy` and `Paste` keys in the key list don't work on macOS.
+
+To undo all your changes, use **Restore Stock Settings** in ZMK Studio.
+
 ## Update the firmware
 
 1. Connect the trackball to your computer over USB.
