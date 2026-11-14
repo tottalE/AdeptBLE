@@ -1,15 +1,17 @@
 # AdeptBLE
 
-A wireless Bluetooth modification of the Ploopy Adept trackball. It replaces the original PCB with a XIAO nRF52840 based board running ZMK, and adds a modified bottom housing.
+A wireless Bluetooth modification of the Ploopy Adept trackball. It's based on the open-source [Ploopy Adept](https://github.com/ploopyco/adept-trackball) design. It replaces the original PCB with a XIAO nRF52840 based board running ZMK, and adds a modified bottom housing.
 
 To learn how to pair the trackball and what each button does, see [USAGE.md](./USAGE.md).
 
 
-## My build
+## Finished build
 
 My build uses `housing/AdeptBLE_bottom.3mf` for the bottom housing and a top housing from [Adept Anyball](https://github.com/adept-anyball/mod), the [50-55mm ball](https://github.com/adept-anyball/mod/tree/master/50-55mm%20ball) variant. This variant is designed for a 50–55 mm ball and BTUs. Its files aren't included in this repository, so download them from the link. 
 
-<img src="./image/build.jpg" alt="The assembled AdeptBLE trackball with yellow buttons and a black 8-ball" width="400">
+<img src="./image/build.jpg" alt="The assembled AdeptBLE trackball with yellow buttons and a black 8-ball" width="600">
+
+<img src="./image/build-inside.jpg" alt="The board and battery in the bottom housing, next to the top housing" width="600">
 
 
 ## 1. Repository contents
@@ -32,9 +34,6 @@ U1, the mouse switches and the JLCPCB-assembled parts go on the front. The XIAO,
 
 All the components are listed in the BOM file. You can order the board from JLCPCB with about half of the components already soldered, but you need to solder the rest yourself.
 
-- You may need to solder: SOT-23-5, D2LS-21
-- You will definitely need to solder: XIAO nRF52840 (board), PMW3610 (optical sensor), the 6-pin slide switch and the battery (so you will need some wire).
-
 ### Assembled by JLCPCB
 
 | Ref | Value | Part | LCSC part | Type |
@@ -46,10 +45,21 @@ All the components are listed in the BOM file. You can order the board from JLCP
 | R1 | 2 MΩ | 0603WAF2004T5E | C22976 | Basic |
 | C8 | 10 µF | CL10A106KP8NNNC | C19702 | Basic |
 
+### Soldered by hand
+
+| Ref | Part | Description | Solder by hand |
+| --- | --- | --- | --- |
+| U1 | TCR2EF19 (SOT-23-5) | Voltage regulator | Possibly |
+| SW1–SW6 | D2LS-21 | Mouse switches | Possibly |
+| J2, J3, J4 | XIAO nRF52840 | Board | Yes |
+| U2 | PMW3610 | Optical sensor | Yes |
+| PSW1 | 6-pin slide switch | Power switch | Yes |
+| J1 | LiPo battery | Battery, soldered with wire | Yes |
+
 
 ### Other parts
 
-- A Ploopy Adept top housing. You can find top housings with various mods [here](https://github.com/adept-anyball/mod).
+- A Ploopy Adept top housing. The default top housing is in Ploopy's [mechanical files](https://github.com/ploopyco/adept-trackball/tree/master/hardware/mechanicals), and it's more compatible with the modified bottom housing than the mods. You can also find top housings with various mods [here](https://github.com/adept-anyball/mod).
 - The modified bottom housing, printed from `housing/AdeptBLE_bottom.3mf`
 - BTUs or ceramic/steel balls to support the ball.
 
